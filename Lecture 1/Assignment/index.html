@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Students Management System</title>
+</head>
+
+<body class="bg-gray-50 py-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-black mb-8 text-center">
+            Students Management System
+        </h1>
+
+        <div id="Search" class="mb-6 flex flex-row gap-3 justify-center items-center">
+            <input type="text" placeholder="Search for Students" id="searchInput"
+                class="px-4 py-2 border border-gray-300 rounded-lg w-full" />
+            <button id="searchButton" onclick="Search()"
+                class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 w-auto">
+                Search
+            </button>
+        </div>
+
+        <div id="searchResult" style="display: none" class="mb-6">
+            <div id="found" class="bg-white rounded-lg shadow-md"></div>
+            <div id="notFound" style="display: none" class="bg-red-50 border border-red-200 rounded-lg p-4">
+                <p class="text-red-700 text-center font-medium">
+                    Sorry, There is no student with this name!
+                </p>
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="info" class="flex flex-row gap-4 mb-6">
+                <div id="averageGrade" class="bg-white rounded-lg shadow-md p-6 flex-1">
+                    <h3 id="averageNum" class="text-3xl font-bold text-blue-600 mb-2"></h3>
+                    <h4 class="text-gray-600 font-medium">Average Grades</h4>
+                </div>
+                <div id="highestGrade" class="bg-white rounded-lg shadow-md p-6 flex-1">
+                    <h3 id="highestNum" class="text-3xl font-bold text-green-600 mb-2"></h3>
+                    <h4 class="text-gray-600 font-medium">Highest Grade</h4>
+                </div>
+            </div>
+
+            <div id="studentsInfo" class="bg-white rounded-lg shadow-md">
+                <table id="studentsTable" class="w-full">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-700 ">
+                                Name
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-700 ">
+                                Grade
+                            </th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-700 ">
+                                Status
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
