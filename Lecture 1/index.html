@@ -4,40 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="script.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
+
   <body>
-    <div>
-      <!-- <button onclick="alertUser()">Make ALert</button> -->
-      <!-- <div id="login">
-        <div style="flex-direction: row">
-          <span>Username: </span>
-          <input type="text" id="username" />
-        </div>
-        <br />
-        <div style="flex-direction: row">
-          <span>Password: </span>
-          <input type="password" id="password" />
-        </div>
-        <br />
-        <button id="submit" onclick="submit()">submit</button>
+    <!-- <button onclick="alertUser()">Make ALert</button> -->
+    <div id="login">
+      <div style="flex-direction: row">
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username" />
       </div>
-      <div id="sell">
-        <div style="flex-direction: row">
-          <label for="sellItem">Enter Item to begin selling: </label>
-          <input type="text" name="sellItem" id="sellItem">
-        </div>
-        <br>
-        <button onclick="sellingItems()">Begin Selling</button>
+      <br />
+      <div style="flex-direction: row">
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password" />
       </div>
-      <div id="buy" >
-        <div>
-          <label for="buyItem">Select item to buy: </label>
-          <select name="buyItem" id="itemList">
-          </select>
-        </div>
-        <button onclick="buyingItems()">Buy Now</button>
-      </div> -->
+      <br />
+      <button onclick="submit()">submit</button>
     </div>
+    <div id="sell" style="display: none">
+      <div style="flex-direction: row">
+        <label for="sellItem">Enter Item to begin selling: </label>
+        <input type="text" name="sellItem" id="sellItem" />
+      </div>
+      <br />
+      <button onclick="sellingItems()">Begin Selling</button>
+    </div>
+    <div id="buy" style="display: none">
+      <div>
+        <span>Select item to buy: </span>
+        <div id="itemList"></div>
+      </div>
+    </div>
+    <br /><br />
+    <button style="display: none" id="rbtn" onclick="returnbtn()">
+      Return
+    </button>
+    <script src="./script.js"></script>
   </body>
 </html>
