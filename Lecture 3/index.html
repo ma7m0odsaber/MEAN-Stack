@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div id="discount" class="flex justify-center gap-2 py-8 bg-yellow-100">
+        <h1 class="text-2xl font-bold">Discount Ends After:</h1>
+        <p id="discount_time" class="text-2xl font-bold text-red-600"></p>
+    </div>
+    <div class="flex justify-center mt-12">
+        <h1 class="text-xl font-bold mb-12">Available Products</h1>
+    </div>
+    <div id="products" class="grid grid-cols-2 gap-4 max-w-4xl mx-auto"></div>
+    <div class="flex justify-center mt-8">
+        <button id="view-cart" type="button" onclick="location.href='Cart.html'" class="bg-white hover:bg-blue-700 border border-blue-600 text-blue-600 hover:text-white font-medium rounded-md text-lg px-64 py-4 focus:outline-none transition duration-150 cursor-pointer">View Cart</button>
+    </div>
+
+    <script src="ShoppingCart.js"></script>
+    <script src="Products.js"></script>
+</body>
+
+</html>
